@@ -2,6 +2,8 @@
 
 A .NET MAUI application designed to practice and demonstrate **Markup Extensions** concepts through a photo filter interface with custom gradient effects.
 
+<img width="848" height="478" alt="l-9" src="https://github.com/user-attachments/assets/19bf0171-79c0-4bb8-b8ca-299b2ffed3a4" />
+
 ## 📋 Project Overview
 
 MAUIFilters is an educational project that showcases the power of **XAML Markup Extensions** in .NET MAUI. The application features a photo filtering interface where users can take photos and apply various gradient filters to them. The main focus is on demonstrating how to create and use custom markup extensions to simplify XAML code and create reusable components.
