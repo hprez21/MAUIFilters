@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MAUIFilters.Views.MauiFiltersView"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extension="clr-namespace:MAUIFilters.Extensions"
+    Title="MauiFiltersView">
+
+    <Grid BackgroundColor="#1A1B1F" RowDefinitions="*,*">
+        <Image Aspect="AspectFill" Source="{Binding CurrentImage}">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding TakePhotoCommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Grid x:Name="Overlay" Opacity="0.6" />
+        <Grid
+            Grid.Row="1"
+            ColumnDefinitions="*,*,*"
+            RowDefinitions="*,*,*">
+
+            <!--#region Row 1-->
+
+
+            <Grid
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0">
+                    <RoundRectangle.Fill>
+                        <!--<LinearGradientBrush>
+                            <GradientStop Offset="0" Color="#0000FF" />
+                            <GradientStop Offset="1" Color="#FF0000" />
+                        </LinearGradientBrush>-->
+                        <extension:Gradients Colors="#0000FF,#FF0000" Direction="d" />
+                    </RoundRectangle.Fill>
+                </RoundRectangle>
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="BluRedient"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Column="1"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#FFFF00,#FF0000', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="Sunflare"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Column="2"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#00FF00,#FFFF00', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="LimeLight"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Row 2-->
+
+
+            <Grid
+                Grid.Row="1"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#D16BA5,#86A8E7,#5FFBF1', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="Dreamscape"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="1"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#411614,#eb0356,#fe7e96', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="Rosewood"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Row="1"
+                Grid.Column="2"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#becf7c,#1763f0,#ee6640', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="MeadowSky"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+            <!--#endregion-->
+
+            <!--#region Row 3-->
+            <Grid
+                Grid.Row="2"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#17224a,#d206e9,#e766f3,#b7d4ef,#f3f6fd', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="GalacticBloom"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Row="2"
+                Grid.Column="1"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#142a55,#005fd7,#279cfb,#a7d3f8,#d5e5fd', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="OceanDawn"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+
+
+            <Grid
+                Grid.Row="2"
+                Grid.Column="2"
+                Margin="5"
+                RowDefinitions=".8*,.2*"
+                WidthRequest="100">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Grid.GestureRecognizers>
+                <RoundRectangle
+                    Grid.RowSpan="2"
+                    CornerRadius="5"
+                    Stroke="#b8b4b4"
+                    VerticalOptions="Center">
+                    <RoundRectangle.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Opacity="1"
+                            Radius="10"
+                            Offset="0,0" />
+                    </RoundRectangle.Shadow>
+                </RoundRectangle>
+                <RoundRectangle CornerRadius="5,5,0,0" Fill="{extension:Gradients Colors='#faad59,#de6c30,#f36a4e,#fbab6a,#f3d19d', Direction=U}" />
+                <Label
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Text="AutumnGlow"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+            </Grid>
+            <!--#endregion-->
+
+        </Grid>
+    </Grid>
+
+</ContentPage>
